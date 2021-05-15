@@ -68,6 +68,19 @@ tmux new-session -s work2 -t work #Create a new session that shares all windows 
 new-window -n console #create a new window and give it a name using -n flag.
 new-window -n processes “top” #new window appears with top command running
 ```
+### Sync Panes
+```
+:setw synchronize-panes on
+:setw synchronize-panes off
+```
+### Resizing Panes
+```
+resize-pane -D 10
+resize-pane -U 10
+resize-pane -L 10
+resize-pane -R 10
+```
+
 ```
 .tmux.conf
 
