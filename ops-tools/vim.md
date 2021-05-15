@@ -12,7 +12,7 @@ Do help i_ CTRL-d for insert commands, v_ for visual, etc.
 Also, when in the help pages, CTRL-] jumps to subjects between |bars| and CTRL-T jumps back (and, of course, :q to quit).
 ```
 
-###variables
+### variables
 ```
 :set - shows vars different from defaults
 :set all - shows all values
@@ -24,7 +24,7 @@ Also, when in the help pages, CTRL-] jumps to subjects between |bars| and CTRL-T
 :verbose set foo? - tells you where it was last set!
 ```
 
-###word & line completion
+### word & line completion
 ```
 ctrl-n, ctrl-p - next/previous word completion (similar word in current file)
 ctrl-x ctrl-l (ctrl-n/p) - line completion
@@ -33,7 +33,8 @@ ctrl-x ctrl-k - dictionary completion
 ctrl-w - erases word (insert mode or on command line)
 ctrl-u - erases line (insert mode or on command line)
 ```
-###Searching
+
+### Searching
 ```
 /pattern - search forward
 ?pattern - search backword
@@ -41,7 +42,7 @@ n - repeat forward search
 N - repeat backword search
 ```
 
-###Searching tricks
+### Searching tricks
 ```
 * - search for word currently under cursor.
 g* - search for partial word under cursor .
@@ -49,7 +50,7 @@ ctrl-o, ctrl-i - go through jump locations
 [I - show lines with matching word under cursor
 ```
 
-###Some variables you might want to set:
+### Some variables you might want to set:
 ```
 :set ignorecase - case insensitive
 :set smartcase - use case if any caps used
@@ -57,7 +58,7 @@ ctrl-o, ctrl-i - go through jump locations
 :set hlsearch - search highlighting
 ```
 
-###text selection
+### text selection
 ```
 V - selects entire lines
 v - selects range of text
@@ -76,7 +77,7 @@ d'k - delete from current position to mark k
 'A-Z - between files
 ```
 
-###indenting
+### indenting
 Some variables you might want to set:
 ```
 :set tabstop 8 - tabs are at proper location
@@ -118,7 +119,7 @@ Other related options:
 :set textwidth
 ```
 
-###multiple windows
+### multiple windows
 ```
 :e filename - edit another file
 :split filename - split window and load another file
@@ -135,11 +136,11 @@ ctrl-w= - make all equal size
 :b 2 - open buffer #2 in this window
 ```
 
-###editing in a stream
+### editing in a stream
 You can take the output of any command and send it into a vim session. From there you could format it, change stuff, and then save it to a file.
 find . | vim -
 
-###tags
+### tags
 Using tags makes it easier to jump to certain parts of your programs. First run ctags from the UNIX command line on your source files (e.g., ctags prog.c or ctags -R to recurse) to generate a “tags” file, then use these while editing your source files:
 
 ```
@@ -151,7 +152,7 @@ ctrl-] - calls :tag on the word under the cursor
 :pclose - close preview window
 ```
 
-###registers
+### registers
 When you copy and cut stuff, it gets saved to registers. You can pull stuff from those registers at a later time.
 
 ```
