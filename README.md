@@ -10,7 +10,7 @@
 ### Databases
 
 - [MySQL](databases/mysql.txt)
-- [Elasticsearch](databases/elasticsearch.txt)
+- [Elasticsearch](databases/elasticsearch.md)
 
 ### Ops-Tools
 
