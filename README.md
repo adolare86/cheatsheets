@@ -26,3 +26,7 @@
 
 #### Webservers
 - [Nginx](ops-tools/nginx.md)
+
+#### Shortcuts
+- [Gmail](shortcuts/gmail.md)
+- [Browser](shortcuts/browser.md)
