@@ -4,25 +4,25 @@
 
 ### Languages
 
-- [Bash](languages/bash.txt)
-- [Python](languages/python.txt)
+- [Bash](languages/bash.md)
+- [Python](languages/python.md)
 
 ### Databases
 
-- [MySQL](databases/mysql.txt)
+- [MySQL](databases/mysql.md)
 - [Elasticsearch](databases/elasticsearch.md)
 
 ### Ops-Tools
 
 #### Dev
-- [Curl](ops-tools/curl.txt)
-- [Vim](ops-tools/vim.txt)
+- [Tmux](ops-tools/tmux.md)
+- [Vim](ops-tools/vim.md)
 
 #### Infra
-- [AWS CLI](ops-tools/aws.txt)
-- [Docker](ops-tools/docker.txt)
-- [Kubernetes](ops-tools/kubernetes.txt)
+- [AWS CLI](ops-tools/aws.md)
+- [Docker](ops-tools/docker.md)
+- [Kubernetes](ops-tools/kubernetes.md)
 
 
 #### Webservers
-- [Nginx](ops-tools/nginx.txt)
+- [Nginx](ops-tools/nginx.md)
