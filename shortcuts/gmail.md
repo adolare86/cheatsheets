@@ -7,7 +7,7 @@ Find the "Keyboard shortcuts" section and select Keyboard shortcuts on.
 Click Save Changes at the bottom of the page.
 ```
 
-###Writing and Sending Gmail
+### Writing and Sending Gmail
 ```
 c - Compose a new email.
 r - Reply to an email.

@@ -28,5 +28,7 @@
 - [Nginx](ops-tools/nginx.md)
 
 #### Shortcuts
+- [Emacs-Bash](shortcuts/emacs-bash.md)
 - [Gmail](shortcuts/gmail.md)
 - [Browser](shortcuts/browser.md)
+- [Notepad++](shortcuts/notepad++.md)
