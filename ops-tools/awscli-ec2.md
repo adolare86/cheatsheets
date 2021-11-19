@@ -1,37 +1,31 @@
-## AWSCLI-ACM Cheatsheet
+## AWSCLI-EC2 Cheatsheet
 
-Use AWS Certificate Manager (ACM) to manage SSL/TLS certificates for AWS-based websites and applications.
 
-### delete-certificate
-#### To delete an ACM certificate from your account
+### attach-volume
+#### To attach a volume to an instance
 ```
-aws acm delete-certificate --certificate-arn arn:aws:acm:us-east-1:123456789012:certificate/12345678-1234-1234-1234-123456789012
-```
-
-### get-certificate
-#### To retrieve an ACM certificate
-```
-aws acm get-certificate --certificate-arn arn:aws:acm:us-east-1:123456789012:certificate/12345678-1234-1234-1234-123456789012
+aws ec2 attach-volume --volume-id vol-1234567890abcdef0 --instance-id i-01474ef662b89480 --device /dev/sdf
 ```
 
-### import-certificate
-#### Import certificate in ACM
+### copy-image
+#### To copy an AMI to another region
 ```
-domain=${1}
-region=${2}
-acm_arn=$(aws acm list-certificates --region ${region} | \
-        jq -jr  '.CertificateSummaryList[] | select(.DomainName == "'${domain}'") | .CertificateArn')
-
-aws acm import-certificate --certificate-arn  ${acm_arn}  \
---certificate  file:///etc/letsencrypt/live/${domain}/cert.pem \
---private-key   file:///etc/letsencrypt/live/${domain}/privkey.pem \
---certificate-chain file:///etc/letsencrypt/live/${domain}/fullchain.pem
+aws ec2 copy-image --source-image-id ami-5731123e --source-region us-east-1 --region ap-northeast-1 --name "My server"
 ```
 
-### list-certificates
-####
+### create-image
+#### To create an AMI from an Amazon EBS-backed instance without reboot
 ```
-aws acm list-certificates --region us-east-1| jq -r '.CertificateSummaryList[] | [.CertificateArn, .DomainName] | @tsv '
+aws ec2 create-image \
+    --instance-id i-0b09a25c58929de26 \
+    --name "My server" \
+    --no-reboot
+```
+
+### create-key-pair
+#### To create a key pair
+```
+aws ec2 create-key-pair --key-name MyKeyPair
 ```
 
 ### request-certificate
