@@ -2,7 +2,8 @@
 
 ### describe-instances
 ```
-aws ec2 describe-instances  --region us-west-2 --output text --query 'Reservations[*].Instances[*].[Tags[?Key==`Name`].Value, InstanceType]'  | sed '$!N;s/\n/\t\t/'
+aws ec2 describe-instances  --region us-west-2 --output text \
+--query 'Reservations[*].Instances[*].[Tags[?Key==`Name`].Value, InstanceType]'  | sed '$!N;s/\n/\t\t/'
 aws ec2 describe-instances  --region us-west-1 --filters 'Name=tag:Name,Values=autoscaling-*' \
   --output text --query 'Reservations[*].Instances[*].[PrivateIpAddress]'
 ```
