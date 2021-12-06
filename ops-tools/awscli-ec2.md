@@ -1,5 +1,11 @@
 ## AWSCLI-EC2 Cheatsheet
 
+### describe-instances
+```
+aws ec2 describe-instances  --region us-west-2 --output text --query 'Reservations[*].Instances[*].[Tags[?Key==`Name`].Value, InstanceType]'  | sed '$!N;s/\n/\t\t/'
+aws ec2 describe-instances  --region us-west-1 --filters 'Name=tag:Name,Values=autoscaling-*' \
+  --output text --query 'Reservations[*].Instances[*].[PrivateIpAddress]'
+```
 
 ### attach-volume
 #### To attach a volume to an instance
@@ -26,21 +32,4 @@ aws ec2 create-image \
 #### To create a key pair
 ```
 aws ec2 create-key-pair --key-name MyKeyPair
-```
-
-### request-certificate
-#### Request a new certificate for the domain
-Note: Idempotency tokens time out after one hour. Therefore, if you call RequestCertificate multiple times with the same idempotency token within one hour, ACM recognizes that you are requesting only one certificate and will issue only one. If you change the idempotency token for each call, ACM recognizes that you are requesting multiple certificates. 
-```
-aws acm request-certificate --domain-name example.com --validation-method DNS
-aws acm request-certificate --domain-name example.com --validation-method EMAIL  \
---domain-validation-options DomainName=example.com,ValidationDomain=example.com
-aws acm request-certificate --domain-name www.example.com --validation-method DNS --idempotency-token 91adc45q
-```
-
-#### Request a new certificate the domain with more subject alternative names using DNS validation
-```
-aws acm request-certificate --domain-name example.com --subject-alternative-names example.in --validation-method DNS
-aws acm request-certificate --domain-name example.com \
---subject-alternative-names *.example.com *.example.in  --validation-method DNS
 ```
