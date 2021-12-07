@@ -12,6 +12,14 @@ Do help i_ CTRL-d for insert commands, v_ for visual, etc.
 Also, when in the help pages, CTRL-] jumps to subjects between |bars| and CTRL-T jumps back (and, of course, :q to quit).
 ```
 
+### .vimrc file
+```
+To make vim use 2 spaces for a tab
+set tabstop=2
+set expandtab
+set shiftwidth=2
+```
+
 ### variables
 ```
 :set - shows vars different from defaults
