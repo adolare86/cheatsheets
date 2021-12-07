@@ -19,6 +19,9 @@
 - [Vim](ops-tools/vim.md)
 
 #### Infra
+- [Linux](ops-tools/linux.md)
+    - [Systemd](ops-tools/systemd.md)
+    - [Openssl](ops-tools/openssl.md)
 - [AWS CLI](ops-tools/aws.md)
     - [ACM](ops-tools/awscli-acm.md)
     - [EC2](ops-tools/awscli-ec2.md)
