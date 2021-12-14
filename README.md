@@ -13,7 +13,7 @@
 - [Elasticsearch](databases/elasticsearch.md)
 
 ### Ops-Tools
-
+- [Commands](ops-tools/commands.md)
 #### Dev
 - [Tmux](ops-tools/tmux.md)
 - [Vim](ops-tools/vim.md)
