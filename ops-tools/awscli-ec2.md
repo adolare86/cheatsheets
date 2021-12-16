@@ -3,18 +3,23 @@
 ### describe-instances
 ```
 aws ec2 describe-instances \
-    --region us-west-2 --output text \
+    --region us-west-2 \
+    --output text \
     --query 'Reservations[*].Instances[*].[Tags[?Key==`Name`].Value, InstanceType]' \
     | sed '$!N;s/\n/\t\t/'
 aws ec2 describe-instances  \
     --region us-west-1 \
     --filters 'Name=tag:Name,Values=autoscaling-*' \
-  --output text --query 'Reservations[*].Instances[*].[PrivateIpAddress]'
+    --output text \
+    --query 'Reservations[*].Instances[*].[PrivateIpAddress]'
 ```
 
 ### Volume
 ```
-aws ec2 attach-volume --volume-id vol-1234567890abcdef0 --instance-id i-01474ef662b89480 --device /dev/sdf
+aws ec2 attach-volume \
+    --volume-id vol-xxxxxxf0 \
+    --instance-id i-xxxxx9480 \
+    --device /dev/sdf
 ```
 
 ### Image
