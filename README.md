@@ -27,7 +27,7 @@
     - [EC2](ops-tools/awscli-ec2.md)
     - [S3](ops-tools/awscli-s3.md)
 - [Docker](ops-tools/docker.md)
-- [Kubernetes](ops-tools/kubernetes.md)
+- [Kubectl](ops-tools/kubectl.md)
 
 
 #### Webservers
