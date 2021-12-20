@@ -21,7 +21,7 @@ k config view -o jsonpath='{. users[]. name}' # display the first user
 k config view -o jsonpath='{. users [*]. name}' # get a list of users
 k config view -o jsonpath="{.contexts[*].name}"
 
-k config gets-contexts        #display list of contexts 
+k config get-contexts        #display list of contexts 
 k config get-contexts -o name
 k config current-context      #display the current-context
 k config use-context <name>   #set the default context to my-cluster-name
@@ -34,6 +34,7 @@ k config set-context test --user=admin -n foo
 ```
 k get pods
 k get pods -l env=dev --no-headers
+k get pod -A --sort-by=.metadata.creationTimestamp
 
 k run nginx --image=nginx
 k run nginx --image=nginx $do #Generate POD Manifest YAML file
