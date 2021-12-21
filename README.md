@@ -14,6 +14,9 @@
 
 ### Ops-Tools
 - [Commands](ops-tools/commands.md)
+- [jq](ops-tools/jq.md)
+- [sed](ops-tools/sed.md)
+- [awk](ops-tools/awk.md)
 #### Dev
 - [Tmux](ops-tools/tmux.md)
 - [Vim](ops-tools/vim.md)
