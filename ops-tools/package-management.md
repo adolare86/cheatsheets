@@ -1,6 +1,6 @@
 ## Package Management Cheatsheet
 
-### apt
+### apt-get
 
 ```
 # # Install or Upgrade an install package
