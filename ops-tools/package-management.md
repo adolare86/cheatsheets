@@ -12,8 +12,17 @@ apt remove <package>
 # Remove <package> and all the files it did create
 apt purge <package>  
 
-# Upgrade all packages
+# Download package information from all configured sources
+apt update
+
+# Upgrade all packages installed on the system
 apt upgrade
+
+# Upgrade all packages installed on the system
+apt upgrade
+
+# Remove packages that were automatically installed to satisfy dependencies for other packages
+apt autoremove
 
 # Upgrade distribution
 apt dist-upgrade
@@ -54,13 +63,32 @@ apt-mark showhold
 
 ### dpkg
 ```
-# List all automatically installed packages
-apt-mark showauto
+# Install deb package
+dpkg -i <package file>
 
-# List all manually installed packages
-apt-mark showmanual
+# Uninstall deb package
+dpkg -P <package name>
 
-# print a list of packages on hold
-apt-mark showhold
+# find all package with broken files
+dpkg -C 
+
+# find partially installed packages
+dpkg -l | awk '/^iF/ {print $2}'
+
+# Resolve file to package
+dpkg -S /etc/vim/vimrc
+
+# Package files
+dpkg -L passwd
+
+# Owned files
+dpkg -c passwd
+
+# Find packages by name
+dpkg -l apache*
+
+# Package details
+dpkg -p passwd
+
 
 ```
