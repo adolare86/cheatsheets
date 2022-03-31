@@ -4,28 +4,28 @@
 
 ```
 # # Install or Upgrade an install package
-apt install <package> 
+apt-get install <package> 
 
 # Remove files installed by <package>
-apt remove <package> 
+apt-get remove <package> 
 
 # Remove <package> and all the files it did create
-apt purge <package>  
+apt-get purge <package>  
 
 # Download package information from all configured sources
-apt update
+apt-get update
 
 # Upgrade all packages installed on the system
-apt upgrade
+apt-get upgrade
 
 # Upgrade all packages installed on the system
-apt upgrade
+apt-get upgrade
 
 # Remove packages that were automatically installed to satisfy dependencies for other packages
 apt autoremove
 
 # Upgrade distribution
-apt dist-upgrade
+apt-get dist-upgrade
 ```
 
 ### apt-cache
