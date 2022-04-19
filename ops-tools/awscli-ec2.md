@@ -17,7 +17,7 @@ aws ec2 describe-instances  \
 ### Change attributes of Ec2 instance
 ```
 aws ec2 modify-instance-attribute \
-    --instance-id <instance type> \
+    --instance-id <instance id> \
     --no-ebs-optimized \
     --region us-west-1
 ```
