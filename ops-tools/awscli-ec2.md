@@ -14,6 +14,14 @@ aws ec2 describe-instances  \
     --query 'Reservations[*].Instances[*].[PrivateIpAddress]'
 ```
 
+### Change attributes of Ec2 instance
+```
+aws ec2 modify-instance-attribute \
+    --instance-id <instance type> \
+    --no-ebs-optimized \
+    --region us-west-1
+```
+
 ### Volume
 ```
 aws ec2 attach-volume \
