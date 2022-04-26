@@ -30,7 +30,8 @@ openssl rsa -in server.key -check
 openssl req -text -noout -verify -in server.csr
 
 # Verify a certificate and key matches
-# These two commands print out md5 checksums of the certificate and key; the checksums can be compared to verify that the certificate and key match.
+# These two commands print out md5 checksums of the certificate and key
+# the checksums can be compared to verify that the certificate and key match.
 openssl x509 -noout -modulus -in server.crt| openssl md5
 openssl rsa -noout -modulus -in server.key| openssl md5
 
