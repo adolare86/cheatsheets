@@ -13,7 +13,6 @@
 - [Elasticsearch](databases/elasticsearch.md)
 
 ### Ops-Tools
-- [Commands](ops-tools/commands.md)
 - [jq](ops-tools/jq.md)
 - [sed](ops-tools/sed.md)
 - [awk](ops-tools/awk.md)
@@ -23,6 +22,7 @@
 
 #### Infra
 - [Linux](ops-tools/linux.md)
+    - [Commands](ops-tools/commands.md)
     - [Package Management(apt/dpkg)](ops-tools/package-management.md)
     - [Systemd](ops-tools/systemd.md)
     - [Openssl](ops-tools/openssl.md)
