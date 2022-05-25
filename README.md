@@ -32,6 +32,8 @@
     - [S3](ops-tools/awscli-s3.md)
 - [Docker](ops-tools/docker.md)
 - [Kubectl](ops-tools/kubectl.md)
+- [Terraform](ops-tools/terraform.md)
+
 
 
 #### Webservers
