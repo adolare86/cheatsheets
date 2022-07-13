@@ -285,3 +285,8 @@ curl -XPUT 'localhost:6060/_cluster/settings' -d '{
 curl -XPUT  http://localhost:6060/_all/_settings -d '{"index.blocks.read_only_allow_delete": null}'
 ```
 
+#### Curator
+```
+curator_cli --host localhost --port 6060 show_indices --filter_list '{"filtertype":"age","source":"name","timestring":"%Y.%m.%d","unit":"days","unit_count":30,"direction":"older"}'
+curator_cli --host localhost --port 6060 delete_indices --filter_list '{"filtertype":"age","source":"name","timestring":"%Y.%m.%d","unit":"days","unit_count":30,"direction":"older"}'
+```
