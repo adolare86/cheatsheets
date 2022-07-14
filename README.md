@@ -19,6 +19,7 @@
 #### Dev
 - [Tmux](ops-tools/tmux.md)
 - [Vim](ops-tools/vim.md)
+- [Visual Studio](ops-tools/visual-studio.md)
 
 #### Infra
 - [Linux](ops-tools/linux.md)
