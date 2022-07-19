@@ -39,7 +39,7 @@ terraform apply -target=module.prod-alb
 terraform apply -var region=us-east-1
 
 # Disable resource refresh
-terraform apply refresh=false
+terraform apply --refresh=false
 
 # Execute number of simultaneous operations
 terraform apply --parallelism=5
