@@ -38,7 +38,19 @@ aws acm list-certificates --region us-east-1| jq -r '.CertificateSummaryList[] |
 #### Request a new certificate for the domain
 Note: Idempotency tokens time out after one hour. Therefore, if you call RequestCertificate multiple times with the same idempotency token within one hour, ACM recognizes that you are requesting only one certificate and will issue only one. If you change the idempotency token for each call, ACM recognizes that you are requesting multiple certificates. 
 ```
-aws acm request-certificate --domain-name example.com --validation-method DNS
+# The following request-certificate command requests a new certificate for the www.example.com domain using DNS validation
+aws acm request-certificate \
+--domain-name www.example.com \
+--subject-alternative-names example.com \
+--validation-method DNS  \
+--region us-east-1
+
+# You can also enter multiple alternative names:
+aws acm request-certificate \
+--domain-name example.com \
+--validation-method DNS \
+--subject-alternative-names b.example.com c.example.com d.example.com 
+
 aws acm request-certificate --domain-name example.com --validation-method EMAIL  \
 --domain-validation-options DomainName=example.com,ValidationDomain=example.com
 aws acm request-certificate --domain-name www.example.com --validation-method DNS --idempotency-token 91adc45q
