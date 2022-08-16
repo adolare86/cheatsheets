@@ -23,7 +23,7 @@
 
 #### Infra
 - [Windows](ops-tools/windows.md)
-- [Linux](ops-tools/linux.md)
+- [Linux](ops-tools/commands.md)
     - [Commands](ops-tools/commands.md)
     - [Package Management(apt/dpkg)](ops-tools/package-management.md)
     - [Systemd](ops-tools/systemd.md)
