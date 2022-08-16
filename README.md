@@ -22,6 +22,7 @@
 - [Visual Studio](ops-tools/visual-studio.md)
 
 #### Infra
+- [Windows](ops-tools/windows.md)
 - [Linux](ops-tools/linux.md)
     - [Commands](ops-tools/commands.md)
     - [Package Management(apt/dpkg)](ops-tools/package-management.md)
