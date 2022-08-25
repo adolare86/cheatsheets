@@ -14,7 +14,7 @@ sed '2 a This is test' test.txt
 sed '$ a This is test' test.txt
 
 # Insert a line anywhere in the file after matching a pattern using the “a”
-sed '/^update.*/a This is test' test.txt
+sed -i '/^    acm_arn.*/a \    web_acl_id                  = data.aws_wafv2_web_acl.waf-cloudfront.arn' main.tf
 
 # Insert multiple lines after the matching pattern using “a”
 sed '/^[a-c]/a test1\ntest2' test.txt
