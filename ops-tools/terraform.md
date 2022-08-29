@@ -12,6 +12,9 @@ terraform init -get-plugins=false
 
 # Do not verify plugins for Hashicorp signature
 terraform init -verify-plugins=false
+
+# Migrate stage file from one location other
+terraform init -migrate-state
 ```
 
 ### plan, apply, destroy
