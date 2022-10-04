@@ -12,6 +12,11 @@ aws ec2 describe-instances  \
     --filters 'Name=tag:Name,Values=autoscaling-*' \
     --output text \
     --query 'Reservations[*].Instances[*].[PrivateIpAddress]'
+# Find the ec2 classic instances    
+  aws ec2 describe-instances \
+      --region us-east-1  \
+      --filters Name=instance-state-name,Values=pending,running,shutting-down,stopping,stopped \
+      | jq '.Reservations[].Instances[] | select(.VpcId == null)' 
 ```
 
 ### Change attributes of Ec2 instance
