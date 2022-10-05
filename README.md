@@ -35,6 +35,7 @@
 - [Docker](ops-tools/docker.md)
 - [Kubectl](ops-tools/kubectl.md)
 - [Terraform](ops-tools/terraform.md)
+- [Git](ops-tools/git.md)
 
 
 
