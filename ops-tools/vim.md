@@ -142,6 +142,7 @@ ctrl-w= - make all equal size
 :only - keep only this window open
 :ls - show current buffers
 :b 2 - open buffer #2 in this window
+:w !sudo tee % # save a file without Root Permission with sudo
 ```
 
 ### editing in a stream
