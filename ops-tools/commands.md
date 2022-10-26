@@ -17,3 +17,8 @@ top -c -o %CPU
 top -c -o %MEM
 ```
 
+### df , du
+```
+du -t 1G -ch *
+du -sh *
+```
