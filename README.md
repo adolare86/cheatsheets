@@ -47,3 +47,4 @@
 - [Gmail](shortcuts/gmail.md)
 - [Browser](shortcuts/browser.md)
 - [Notepad++](shortcuts/notepad++.md)
+- [Mac-terminal](ops-tools/Mac-terminal.md)
